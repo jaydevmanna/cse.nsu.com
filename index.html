@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MISS MISTI</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="page-bg"></div>
+
+    <div class="logo-tag">MISS MISTI</div>
+
+    <section id="loginPage" class="page-section active">
+      <div class="login-card glass-card">
+        <h1>Welcome Back</h1>
+        <p class="login-subtitle">Enter your secure details to unlock the surprise.</p>
+
+        <form id="loginForm" class="login-form">
+          <label>
+            Username
+            <input type="text" id="username" placeholder="Enter username" autocomplete="off" />
+          </label>
+          <label>
+            Password
+            <input type="password" id="password" placeholder="Enter password" autocomplete="off" />
+          </label>
+          <button type="submit" class="btn btn-primary">Login</button>
+          <div id="loginError" class="error-message"></div>
+        </form>
+
+        <div class="hint-card">
+          <div>Theme: Sky Blue + Soft Pink</div>
+          <div>Fixed credentials only.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="surpriseScreen" class="page-section">
+      <div class="surprise-overlay"></div>
+      <div class="celebration-layer">
+        <div class="particles"></div>
+        <div class="floating-hearts"></div>
+        <div class="flower-lights"></div>
+      </div>
+
+      <div class="surprise-content glass-card">
+        <div class="neon-label">HAPPY BIRTHDAY</div>
+        <h2 class="neon-title">MISS MISTI</h2>
+        <p class="surprise-text">
+          May your smile always shine brighter than the stars.<br />
+          Wishing you endless happiness,<br />
+          good health,<br />
+          success,<br />
+          love,<br />
+          and beautiful memories forever.
+        </p>
+        <p class="special-note">You are truly special.</p>
+
+        <div class="controls-row">
+          <button id="musicToggle" class="btn btn-secondary">Music: Off</button>
+          <button id="continueButton" class="btn btn-primary" disabled>Continue</button>
+        </div>
+      </div>
+
+      <div class="fireworks"></div>
+      <div class="confetti"></div>
+      <div class="heart-rain"></div>
+      <div class="rose-petals"></div>
+      <div class="sunflower-petals"></div>
+      <div class="balloons"></div>
+      <div class="gift-box"></div>
+    </section>
+
+    <section id="dashboardPage" class="page-section">
+      <aside class="sidebar glass-card">
+        <div class="sidebar-brand">MISS MISTI</div>
+        <nav>
+            <a class="active" href="#">Dashboard</a>
+            <a href="#gallerySection">Gallery</a>
+            <a href="#memoriesSection">Memories</a>
+            <a href="#notesSection">Notes</a>
+            <a href="#timelineSection">Timeline</a>
+            <a href="#settingsSection">Settings</a>
+        </nav>
+        <button id="logoutButton" class="btn btn-ghost">Logout</button>
+      </aside>
+
+      <main class="dashboard-content">
+        <div class="dash-top-row">
+          <div class="welcome-card glass-card">
+            <h2>Welcome, MISS MISTI</h2>
+            <p>Today is your special day, enjoy the celebration and the cherished moments.</p>
+          </div>
+          <div class="profile-card glass-card">
+            <div class="profile-image">MM</div>
+            <div>
+              <h3>MISS MISTI</h3>
+              <p>Birthday Star</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card glass-card">
+            <span>07</span>
+            <small>Months of Friendship</small>
+          </div>
+          <div class="stat-card glass-card">
+            <span>01</span>
+            <small>Happy Moment</small>
+          </div>
+          <div class="stat-card glass-card">
+            <span>01</span>
+            <small>Wish Count</small>
+          </div>
+        </div>
+
+        <section id="gallerySection" class="section-panel glass-card">
+          <div class="section-header">
+            <h3>Gallery</h3>
+            <p>Special photos and favorite snapshots.</p>
+          </div>
+          <div class="gallery-grid" id="galleryGrid">
+            <div class="gallery-item"><span>Sunshine</span></div>
+            <div class="gallery-item"><span>Roses</span></div>
+            <div class="gallery-item"><span>Smiles</span></div>
+          </div>
+          <label class="upload-card">
+            <span>Upload a photo</span>
+            <input type="file" id="photoUpload" accept="image/*" />
+          </label>
+        </section>
+
+        <section id="memoriesSection" class="section-panel glass-card">
+          <div class="section-header">
+            <h3>Memories</h3>
+            <p>Relive the moments that matter most.</p>
+          </div>
+          <div class="memories-list">
+            <article>
+              <h4>Sunset picnic</h4>
+              <p>We laughed until the moon came up.</p>
+            </article>
+            <article>
+              <h4>Rainy day surprise</h4>
+              <p>A magical evening full of warmth.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section-row">
+          <section id="notesSection" class="section-panel glass-card notes-panel">
+            <div class="section-header">
+              <h3>Notes</h3>
+              <p>Write a sweet birthday message.</p>
+            </div>
+            <textarea id="notesInput" placeholder="Type your special note..."></textarea>
+            <button id="saveNote" class="btn btn-primary">Save Note</button>
+          </section>
+
+          <section class="section-panel glass-card info-panel">
+            <div class="info-card">
+              <h4>Favorite Moments</h4>
+              <p>Happy Moment always waiting for every notification.</p>
+            </div>
+            <div class="countdown-card">
+              <h4>Birthday Countdown</h4>
+              <p class="countdown-note">Birthday date: 07/12/2007</p>
+              <div id="countdownTimer">00d 00h 00m 00s</div>
+            </div>
+          </section>
+        </section>
+
+        <section id="timelineSection" class="section-panel glass-card timeline-panel">
+          <div class="section-header">
+            <h3>Timeline</h3>
+            <p>Highlights from moments we've shared.</p>
+          </div>
+          <div class="timeline-list">
+            <div class="timeline-item">
+              <span>2026</span>
+              <p>A magical year of celebration and the birthday surprise.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="settingsSection" class="section-panel glass-card settings-panel">
+          <div class="section-header">
+            <h3>Settings</h3>
+            <p>Customize your dashboard experience.</p>
+          </div>
+          <div class="settings-grid">
+            <div class="setting-item">Theme: Pink + Sky Blue</div>
+            <div class="setting-item">Animations: Enabled</div>
+            <div class="setting-item">Notifications: On</div>
+          </div>
+        </section>
+      </main>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
